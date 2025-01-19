@@ -27,12 +27,11 @@
 
 ## 📂 项目结构
 
-bash
-CustomToast/
-├── Tweak.x # 主要实现代码
-├── Makefile # 编译配置
-├── control # 插件信息
-└── CustomPencilAlert.plist # 注入配置
+* 📱 Tweak.x                  主要实现代码
+* 🔧 Makefile                 编译配置
+* 📋 control                  插件信息
+* ⚙️ CustomPencilAlert.plist  注入配置
+
 
 ## 🚀 使用方法
 
@@ -40,10 +39,11 @@ CustomToast/
 
 1. 确保已安装 [Theos](https://theos.dev/)
 2. 克隆项目并编译：
-bash
+```bash
 git clone https://github.com/H7ang0/CustomPencilAlert.git
 cd CustomPencilAlert
 make package
+```
 
 3. 安装生成的 deb 文件
 4. 重启设备使插件生效
@@ -51,18 +51,19 @@ make package
 ### 💡 自定义使用
 
 修改 `CustomPencilAlert.plist` 指定注入目标：
-xml
+
 <key>Bundles</key>
 <array>
 <string>目标应用的Bundle ID</string>
 </array>
 ## 📝 代码示例
-objc
+```objc
 // 显示 Toast
 [CustomToastView showToast:@"你的消息"];
 // 自定义配置
 CGFloat width = 200; // 修改宽度
 CGFloat height = 50; // 修改高度
+```
 
 ## ⚠️ 注意事项
 
